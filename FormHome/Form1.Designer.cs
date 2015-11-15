@@ -37,6 +37,7 @@
             this.ajudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.faleConoscoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aluguelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.smihome.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,7 +58,8 @@
             this.imovelToolStripMenuItem,
             this.inquilinoToolStripMenuItem,
             this.proprietarioToolStripMenuItem,
-            this.corretorToolStripMenuItem});
+            this.corretorToolStripMenuItem,
+            this.aluguelToolStripMenuItem});
             this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
             this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.cadastroToolStripMenuItem.Text = "Cadastro";
@@ -74,18 +76,21 @@
             this.inquilinoToolStripMenuItem.Name = "inquilinoToolStripMenuItem";
             this.inquilinoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.inquilinoToolStripMenuItem.Text = "Inquilino";
+            this.inquilinoToolStripMenuItem.Click += new System.EventHandler(this.inquilinoToolStripMenuItem_Click);
             // 
             // proprietarioToolStripMenuItem
             // 
             this.proprietarioToolStripMenuItem.Name = "proprietarioToolStripMenuItem";
             this.proprietarioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.proprietarioToolStripMenuItem.Text = "proprietario";
+            this.proprietarioToolStripMenuItem.Text = "Proprietario";
+            this.proprietarioToolStripMenuItem.Click += new System.EventHandler(this.proprietarioToolStripMenuItem_Click);
             // 
             // corretorToolStripMenuItem
             // 
             this.corretorToolStripMenuItem.Name = "corretorToolStripMenuItem";
             this.corretorToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.corretorToolStripMenuItem.Text = "corretor";
+            this.corretorToolStripMenuItem.Text = "Corretor";
+            this.corretorToolStripMenuItem.Click += new System.EventHandler(this.corretorToolStripMenuItem_Click);
             // 
             // ajudaToolStripMenuItem
             // 
@@ -107,6 +112,13 @@
             this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
             this.sobreToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.sobreToolStripMenuItem.Text = "Sobre";
+            // 
+            // aluguelToolStripMenuItem
+            // 
+            this.aluguelToolStripMenuItem.Name = "aluguelToolStripMenuItem";
+            this.aluguelToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.aluguelToolStripMenuItem.Text = "Aluguel";
+            this.aluguelToolStripMenuItem.Click += new System.EventHandler(this.aluguelToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -135,6 +147,7 @@
         private System.Windows.Forms.ToolStripMenuItem ajudaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem faleConoscoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sobreToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aluguelToolStripMenuItem;
     }
 }
 
