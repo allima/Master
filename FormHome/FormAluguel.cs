@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace FormHome
 {
-    public partial class Form1 : Form
+    public partial class FormAluguel : Form
     {
-        public Form1()
+        public FormAluguel()
         {
             InitializeComponent();
-        }
-
-        private void imovelToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

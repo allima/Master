@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.smihome = new System.Windows.Forms.MenuStrip();
             this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.imovelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inquilinoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -37,19 +37,19 @@
             this.ajudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.faleConoscoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1.SuspendLayout();
+            this.smihome.SuspendLayout();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // smihome
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.smihome.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cadastroToolStripMenuItem,
             this.ajudaToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(484, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            this.smihome.Location = new System.Drawing.Point(0, 0);
+            this.smihome.Name = "smihome";
+            this.smihome.Size = new System.Drawing.Size(484, 24);
+            this.smihome.TabIndex = 0;
+            this.smihome.Text = "menuStrip1";
             // 
             // cadastroToolStripMenuItem
             // 
@@ -67,6 +67,7 @@
             this.imovelToolStripMenuItem.Name = "imovelToolStripMenuItem";
             this.imovelToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.imovelToolStripMenuItem.Text = "Imovel";
+            this.imovelToolStripMenuItem.Click += new System.EventHandler(this.imovelToolStripMenuItem_Click);
             // 
             // inquilinoToolStripMenuItem
             // 
@@ -112,12 +113,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 336);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
+            this.Controls.Add(this.smihome);
+            this.MainMenuStrip = this.smihome;
             this.Name = "Form1";
             this.Text = "Form1";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.smihome.ResumeLayout(false);
+            this.smihome.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -125,7 +126,7 @@
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.MenuStrip smihome;
         private System.Windows.Forms.ToolStripMenuItem cadastroToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem imovelToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem inquilinoToolStripMenuItem;
