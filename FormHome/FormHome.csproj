@@ -58,11 +58,23 @@
     <Compile Include="FormAluguel.Designer.cs">
       <DependentUpon>FormAluguel.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAluguelManutencao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAluguelManutencao.Designer.cs">
+      <DependentUpon>FormAluguelManutencao.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCorretor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormCorretor.Designer.cs">
       <DependentUpon>FormCorretor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCorretorManutencao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCorretorManutencao.Designer.cs">
+      <DependentUpon>FormCorretorManutencao.cs</DependentUpon>
     </Compile>
     <Compile Include="FormImovel.cs">
       <SubType>Form</SubType>
@@ -70,17 +82,35 @@
     <Compile Include="FormImovel.Designer.cs">
       <DependentUpon>FormImovel.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormImovelManutencao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormImovelManutencao.Designer.cs">
+      <DependentUpon>FormImovelManutencao.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormInquilino.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormInquilino.Designer.cs">
       <DependentUpon>FormInquilino.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormInquilinoManutencao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInquilinoManutencao.Designer.cs">
+      <DependentUpon>FormInquilinoManutencao.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormProprietario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormProprietario.Designer.cs">
       <DependentUpon>FormProprietario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProprietarioManutencao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProprietarioManutencao.Designer.cs">
+      <DependentUpon>FormProprietarioManutencao.cs</DependentUpon>
     </Compile>
     <Compile Include="masterimovelDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
