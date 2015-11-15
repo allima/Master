@@ -16,5 +16,12 @@ namespace FormHome
         {
             InitializeComponent();
         }
+
+        private void FormImovel_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'masterimovelDataSet.imovel' table. You can move, or remove it, as needed.
+            this.imovelTableAdapter.Fill(this.masterimovelDataSet.imovel);
+
+        }
     }
 }

@@ -16,5 +16,12 @@ namespace FormHome
         {
             InitializeComponent();
         }
+
+        private void FormAluguel_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'masterimovelDataSet.locacao' table. You can move, or remove it, as needed.
+            this.locacaoTableAdapter.Fill(this.masterimovelDataSet.locacao);
+
+        }
     }
 }

@@ -16,5 +16,12 @@ namespace FormHome
         {
             InitializeComponent();
         }
+
+        private void FormInquilino_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'masterimovelDataSet.inquilino' table. You can move, or remove it, as needed.
+            this.inquilinoTableAdapter.Fill(this.masterimovelDataSet.inquilino);
+
+        }
     }
 }

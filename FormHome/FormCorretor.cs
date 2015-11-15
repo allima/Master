@@ -16,5 +16,12 @@ namespace FormHome
         {
             InitializeComponent();
         }
+
+        private void FormCorretor_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'masterimovelDataSet.corretor' table. You can move, or remove it, as needed.
+            this.corretorTableAdapter.Fill(this.masterimovelDataSet.corretor);
+
+        }
     }
 }

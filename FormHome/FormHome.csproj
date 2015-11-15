@@ -82,6 +82,11 @@
     <Compile Include="FormProprietario.Designer.cs">
       <DependentUpon>FormProprietario.cs</DependentUpon>
     </Compile>
+    <Compile Include="masterimovelDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>masterimovelDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -89,6 +94,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormAluguel.resx">
       <DependentUpon>FormAluguel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCorretor.resx">
+      <DependentUpon>FormCorretor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormImovel.resx">
+      <DependentUpon>FormImovel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInquilino.resx">
+      <DependentUpon>FormInquilino.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProprietario.resx">
+      <DependentUpon>FormProprietario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -99,6 +116,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="masterimovelDataSet.xsc">
+      <DependentUpon>masterimovelDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="masterimovelDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>masterimovelDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="masterimovelDataSet.xss">
+      <DependentUpon>masterimovelDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
