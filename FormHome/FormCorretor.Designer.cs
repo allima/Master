@@ -41,9 +41,14 @@
             this.masterimovelDataSet = new FormHome.masterimovelDataSet();
             this.corretorTableAdapter = new FormHome.masterimovelDataSetTableAdapters.corretorTableAdapter();
             this.btn_novo_corretor = new System.Windows.Forms.Button();
+            this.masterimovelDataSet1 = new FormHome.masterimovelDataSet1();
+            this.corretorBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.corretorTableAdapter1 = new FormHome.masterimovelDataSet1TableAdapters.corretorTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Corretor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.corretorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.masterimovelDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masterimovelDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.corretorBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // dgv_Corretor
@@ -58,7 +63,7 @@
             this.cpfDataGridViewTextBoxColumn,
             this.rgDataGridViewTextBoxColumn,
             this.telefoneDataGridViewTextBoxColumn});
-            this.dgv_Corretor.DataSource = this.corretorBindingSource;
+            this.dgv_Corretor.DataSource = this.corretorBindingSource1;
             this.dgv_Corretor.Location = new System.Drawing.Point(31, 39);
             this.dgv_Corretor.Name = "dgv_Corretor";
             this.dgv_Corretor.Size = new System.Drawing.Size(751, 186);
@@ -132,6 +137,20 @@
             this.btn_novo_corretor.UseVisualStyleBackColor = true;
             this.btn_novo_corretor.Click += new System.EventHandler(this.btn_novo_corretor_Click);
             // 
+            // masterimovelDataSet1
+            // 
+            this.masterimovelDataSet1.DataSetName = "masterimovelDataSet1";
+            this.masterimovelDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // corretorBindingSource1
+            // 
+            this.corretorBindingSource1.DataMember = "corretor";
+            this.corretorBindingSource1.DataSource = this.masterimovelDataSet1;
+            // 
+            // corretorTableAdapter1
+            // 
+            this.corretorTableAdapter1.ClearBeforeFill = true;
+            // 
             // FormCorretor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -145,6 +164,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Corretor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.corretorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.masterimovelDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masterimovelDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.corretorBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -163,5 +184,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn rgDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefoneDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button btn_novo_corretor;
+        private masterimovelDataSet1 masterimovelDataSet1;
+        private System.Windows.Forms.BindingSource corretorBindingSource1;
+        private masterimovelDataSet1TableAdapters.corretorTableAdapter corretorTableAdapter1;
     }
 }

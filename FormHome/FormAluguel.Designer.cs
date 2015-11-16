@@ -30,16 +30,21 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.masterimovelDataSet = new FormHome.masterimovelDataSet();
-            this.locacaoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.locacaoTableAdapter = new FormHome.masterimovelDataSetTableAdapters.locacaoTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idimovelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idinquilinoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idcorretorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.locacaoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.masterimovelDataSet = new FormHome.masterimovelDataSet();
+            this.locacaoTableAdapter = new FormHome.masterimovelDataSetTableAdapters.locacaoTableAdapter();
+            this.masterimovelDataSet1 = new FormHome.masterimovelDataSet1();
+            this.locacaoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.locacaoTableAdapter1 = new FormHome.masterimovelDataSet1TableAdapters.locacaoTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.masterimovelDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.locacaoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masterimovelDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masterimovelDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.locacaoBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -51,25 +56,11 @@
             this.idimovelDataGridViewTextBoxColumn,
             this.idinquilinoDataGridViewTextBoxColumn,
             this.idcorretorDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.locacaoBindingSource;
+            this.dataGridView1.DataSource = this.locacaoBindingSource1;
             this.dataGridView1.Location = new System.Drawing.Point(24, 26);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(461, 150);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // masterimovelDataSet
-            // 
-            this.masterimovelDataSet.DataSetName = "masterimovelDataSet";
-            this.masterimovelDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // locacaoBindingSource
-            // 
-            this.locacaoBindingSource.DataMember = "locacao";
-            this.locacaoBindingSource.DataSource = this.masterimovelDataSet;
-            // 
-            // locacaoTableAdapter
-            // 
-            this.locacaoTableAdapter.ClearBeforeFill = true;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -95,6 +86,34 @@
             this.idcorretorDataGridViewTextBoxColumn.HeaderText = "id_corretor";
             this.idcorretorDataGridViewTextBoxColumn.Name = "idcorretorDataGridViewTextBoxColumn";
             // 
+            // locacaoBindingSource
+            // 
+            this.locacaoBindingSource.DataMember = "locacao";
+            this.locacaoBindingSource.DataSource = this.masterimovelDataSet;
+            // 
+            // masterimovelDataSet
+            // 
+            this.masterimovelDataSet.DataSetName = "masterimovelDataSet";
+            this.masterimovelDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // locacaoTableAdapter
+            // 
+            this.locacaoTableAdapter.ClearBeforeFill = true;
+            // 
+            // masterimovelDataSet1
+            // 
+            this.masterimovelDataSet1.DataSetName = "masterimovelDataSet1";
+            this.masterimovelDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // locacaoBindingSource1
+            // 
+            this.locacaoBindingSource1.DataMember = "locacao";
+            this.locacaoBindingSource1.DataSource = this.masterimovelDataSet1;
+            // 
+            // locacaoTableAdapter1
+            // 
+            this.locacaoTableAdapter1.ClearBeforeFill = true;
+            // 
             // FormAluguel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -105,8 +124,10 @@
             this.Text = "FormAluguel";
             this.Load += new System.EventHandler(this.FormAluguel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.masterimovelDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.locacaoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masterimovelDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masterimovelDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.locacaoBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -121,5 +142,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idimovelDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idinquilinoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idcorretorDataGridViewTextBoxColumn;
+        private masterimovelDataSet1 masterimovelDataSet1;
+        private System.Windows.Forms.BindingSource locacaoBindingSource1;
+        private masterimovelDataSet1TableAdapters.locacaoTableAdapter locacaoTableAdapter1;
     }
 }

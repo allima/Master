@@ -52,6 +52,11 @@
     <Compile Include="dao\ImovelOperacoes.cs" />
     <Compile Include="dao\InquilinoOperacoes.cs" />
     <Compile Include="dao\ProprietarioOperacoes.cs" />
+    <Compile Include="masterimovelDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>masterimovelDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="model\Aluguel.cs" />
     <Compile Include="model\Corretor.cs" />
     <Compile Include="Form1.cs">
@@ -170,6 +175,17 @@
     </None>
     <None Include="masterimovelDataSet.xss">
       <DependentUpon>masterimovelDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="masterimovelDataSet1.xsc">
+      <DependentUpon>masterimovelDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="masterimovelDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>masterimovelDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="masterimovelDataSet1.xss">
+      <DependentUpon>masterimovelDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
