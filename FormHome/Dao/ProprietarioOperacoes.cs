@@ -11,7 +11,7 @@ namespace FormHome.controle
     class ProprietarioOperacoes
     {
         private static string stringConexao = ConfigurationManager.
-           ConnectionStrings[@"FormHome.Properties.Settings.masterimovelConnectionString"].
+           ConnectionStrings[@"FormHome.Properties.Settings.masterimovelConnectionString1"].
            ConnectionString;
 
         public static void Incluir(Proprietario proprietario)

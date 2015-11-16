@@ -12,7 +12,7 @@ namespace FormHome.controle
     class AluguelOperacoes
     {
         private static string stringConexao = ConfigurationManager.
-            ConnectionStrings[@"FormHome.Properties.Settings.masterimovelConnectionString"].
+            ConnectionStrings[@"FormHome.Properties.Settings.masterimovelConnectionString1"].
             ConnectionString;
 
         public static void Incluir(Aluguel aluguel)

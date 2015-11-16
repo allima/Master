@@ -11,17 +11,25 @@ namespace FormHome.controle
     class CorretorOperacoes
     {
         private static string stringConexao = ConfigurationManager.
-           ConnectionStrings[@"FormHome.Properties.Settings.masterimovelConnectionString"].
+           ConnectionStrings[@"FormHome.Properties.Settings.masterimovelConnectionString1"].
            ConnectionString;
 
         public static void Incluir(Corretor corretor)
         {
 
             SqlConnection conexao = new SqlConnection(stringConexao); // Define a conexao com o banco de dados. 
-            string comando = "insert aluguel values (" + // Instruc5o SQL a ser executada.
+            string comando = @"insert into corretor
+           (nome
+           , email
+           , endereco
+           , cpf
+           , rg
+           , telefone) values (" + // Instruc5o SQL a ser executada.
             corretor.Nome + "'," +
-            corretor.Telefone + "'," +
-            corretor.Rg + "')";
+            corretor.Endereco + "'," +
+            corretor.Cpf + "'," +
+            corretor.Rg + "'," +
+            corretor.Telefone + "')";
             conexao.Open(); // Abre a conexao com o banco de dados.
                             // Determina a instruc5o SQL e a string de conexio a ser usada. 
             SqlCommand sql = new SqlCommand(comando, conexao);
@@ -32,10 +40,13 @@ namespace FormHome.controle
         public static void Alterar(Corretor corretor)
         {
             SqlConnection conexao = new SqlConnection(stringConexao); // Define a conexao com o banco de dados. 
-            string comando = "update aluguel set " + // Instrucao SQL a ser executada. 
+            string comando = @"update corretor set " + // Instrucao SQL a ser executada. 
                 "id_imovel = '" + corretor.Nome + "', " +
+                
+                
                 "id_inquilino = '" + corretor.Telefone + "'" +
                 "id_corretor = '" + corretor.Rg + "', " +
+
                 "where id = " + corretor.Id;
             conexao.Open(); // Abre a conexao com o banco de dados.
                             // Determina a instrucao SQL e a string de conexao a ser usada.
