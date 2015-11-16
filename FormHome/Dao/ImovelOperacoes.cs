@@ -18,7 +18,7 @@ namespace FormHome.controle
         {
 
             SqlConnection conexao = new SqlConnection(stringConexao); // Define a conexao com o banco de dados. 
-            string comando = "insert aluguel values (" + // Instruc5o SQL a ser executada.
+            string comando = @"insert aluguel values (" + // Instruc5o SQL a ser executada.
         //    imovel.Decricao + "'," +
            // imovel.Inquilino.Id + "'," +
             imovel.Decricao + "')";
@@ -32,7 +32,7 @@ namespace FormHome.controle
         public static void Alterar(Imovel imovel)
         {
             SqlConnection conexao = new SqlConnection(stringConexao); // Define a conexao com o banco de dados. 
-            string comando = "update aluguel set " + // Instrucao SQL a ser executada. 
+            string comando = @"update aluguel set " + // Instrucao SQL a ser executada. 
              //   "id_imovel = '" + imovel.Imovel.Id + "', " +
              //   "id_inquilino = '" + imovel.Inquilino.Id + "'" +
              //   "id_corretor = '" + imovel.Corretor.Id + "', " +
@@ -47,7 +47,7 @@ namespace FormHome.controle
         public static void Excluir(Imovel imovel)
         {
             SqlConnection conexao = new SqlConnection(stringConexao); // Define a conexao com o banco de dados.
-            string comando = "delete from aluguel where id = " +  // Instrucao SQL a ser executada. 
+            string comando = @"delete from aluguel where id = " +  // Instrucao SQL a ser executada. 
                 imovel.Id.ToString();
             conexao.Open(); // Abre a conexao com o banco de dados. 
                             // Determina a instruc5o SQL e a string de conexao a ser usada.

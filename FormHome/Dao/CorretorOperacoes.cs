@@ -41,12 +41,13 @@ namespace FormHome.controle
         {
             SqlConnection conexao = new SqlConnection(stringConexao); // Define a conexao com o banco de dados. 
             string comando = @"update corretor set " + // Instrucao SQL a ser executada. 
-                "id_imovel = '" + corretor.Nome + "', " +
-                
-                
-                "id_inquilino = '" + corretor.Telefone + "'" +
-                "id_corretor = '" + corretor.Rg + "', " +
-
+                "nome = '" + corretor.Nome + "', " +
+                "email = '" + corretor.Email + "', " +
+                "endereco = '" + corretor.Endereco + "', " +
+                "endereco = '" + corretor.Endereco + "', " +
+                "cpf = '" + corretor.Cpf + "'" +
+                "rg = '" + corretor.Rg + "', " +
+                "telefone = '" + corretor.Telefone + "', " +
                 "where id = " + corretor.Id;
             conexao.Open(); // Abre a conexao com o banco de dados.
                             // Determina a instrucao SQL e a string de conexao a ser usada.
@@ -58,7 +59,7 @@ namespace FormHome.controle
         public static void Excluir(Corretor corretor)
         {
             SqlConnection conexao = new SqlConnection(stringConexao); // Define a conexao com o banco de dados.
-            string comando = "delete from aluguel where id = " +  // Instrucao SQL a ser executada. 
+            string comando = @"delete from aluguel where id = " +  // Instrucao SQL a ser executada. 
                 corretor.Id.ToString();
             conexao.Open(); // Abre a conexao com o banco de dados. 
                             // Determina a instruc5o SQL e a string de conexao a ser usada.
