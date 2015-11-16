@@ -205,6 +205,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FormCorretorManutencao";
             this.Text = "FormCorretorManutecao";
+            this.Load += new System.EventHandler(this.FormCorretorManutencao_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

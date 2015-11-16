@@ -29,7 +29,7 @@ namespace FormHome
             InitializeComponent();
             this.codigo = codigo;
             this.operacao = "alt-exc";
-            Carrega();
+           
 
         }
 
@@ -140,17 +140,21 @@ namespace FormHome
 
         }
 
-        private void Carrega()
+
+
+        private void FormCorretorManutencao_Load(object sender, EventArgs e)
         {
-            Corretor cor = CorretorOperacoes.Consultar(codigo);
-            txtb_nome.Text = cor.Nome.ToString();
-            txtb_endereco.Text = cor.Endereco.ToString();
-            txtb_cpf.Text = cor.Cpf.ToString();
-            txtb_rg.Text = cor.Rg.ToString();
-            txtb_email.Text = cor.Email.ToString();
-            txtb_telefone.Text = cor.Telefone.ToString();
-
+            if (operacao == "alt-exc")
+            {// Se a operacao for de alteracao ou exclusao. 
+             // Chama o metodo Consultar da classe CargosOperacoes. 
+                Corretor corretor = CorretorOperacoes.Consultar(codigo);
+                txtb_nome.Text = corretor.Nome.ToString();
+                txtb_endereco.Text = corretor.Endereco.ToString();
+                txtb_cpf.Text = corretor.Cpf.ToString();
+                txtb_rg.Text = corretor.Rg.ToString();
+                txtb_email.Text = corretor.Email.ToString();
+                txtb_telefone.Text = corretor.Telefone.ToString();
+            }
         }
-
     }
 }
