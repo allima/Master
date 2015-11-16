@@ -57,6 +57,7 @@
             this.dgv_imovel.Name = "dgv_imovel";
             this.dgv_imovel.Size = new System.Drawing.Size(428, 150);
             this.dgv_imovel.TabIndex = 0;
+            this.dgv_imovel.DoubleClick += new System.EventHandler(this.dgv_imovel_DoubleClick);
             // 
             // idDataGridViewTextBoxColumn
             // 

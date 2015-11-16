@@ -61,6 +61,7 @@
             this.dgv_aluguel.Name = "dgv_aluguel";
             this.dgv_aluguel.Size = new System.Drawing.Size(461, 150);
             this.dgv_aluguel.TabIndex = 0;
+            this.dgv_aluguel.DoubleClick += new System.EventHandler(this.dgv_aluguel_DoubleClick);
             // 
             // idDataGridViewTextBoxColumn
             // 

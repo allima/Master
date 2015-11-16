@@ -25,5 +25,20 @@ namespace FormHome
             this.locacaoTableAdapter.Fill(this.masterimovelDataSet.locacao);
 
         }
+
+        private void dgv_aluguel_DoubleClick(object sender, EventArgs e)
+        {
+
+
+
+
+            // Obtem o codigo do do gride da linha selecionad pelo duplo clique.
+            int codigo = Convert.ToInt32(dgv_aluguel.SelectedRows[0].Cells[0].Value.ToString());
+
+            // Instancia a clesse FormeClasseManutencao enviando o codigo da classe como argumento
+            FormAluguelManutencao FormAluguelManutencao = new FormAluguelManutencao(codigo);
+            FormAluguelManutencao.ShowDialog(this);
+
+        }
     }
 }

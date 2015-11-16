@@ -53,6 +53,7 @@
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nome";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtb_nome
             // 
@@ -60,6 +61,7 @@
             this.txtb_nome.Name = "txtb_nome";
             this.txtb_nome.Size = new System.Drawing.Size(179, 20);
             this.txtb_nome.TabIndex = 1;
+            this.txtb_nome.TextChanged += new System.EventHandler(this.txtb_nome_TextChanged);
             // 
             // label2
             // 
@@ -69,6 +71,7 @@
             this.label2.Size = new System.Drawing.Size(49, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Telefone";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtb_telefone
             // 
@@ -76,6 +79,7 @@
             this.txtb_telefone.Name = "txtb_telefone";
             this.txtb_telefone.Size = new System.Drawing.Size(179, 20);
             this.txtb_telefone.TabIndex = 3;
+            this.txtb_telefone.TextChanged += new System.EventHandler(this.txtb_telefone_TextChanged);
             // 
             // txtb_rg
             // 
@@ -83,6 +87,7 @@
             this.txtb_rg.Name = "txtb_rg";
             this.txtb_rg.Size = new System.Drawing.Size(179, 20);
             this.txtb_rg.TabIndex = 4;
+            this.txtb_rg.TextChanged += new System.EventHandler(this.txtb_rg_TextChanged);
             // 
             // txtb_cpf
             // 
@@ -90,6 +95,7 @@
             this.txtb_cpf.Name = "txtb_cpf";
             this.txtb_cpf.Size = new System.Drawing.Size(179, 20);
             this.txtb_cpf.TabIndex = 5;
+            this.txtb_cpf.TextChanged += new System.EventHandler(this.txtb_cpf_TextChanged);
             // 
             // label3
             // 
@@ -99,6 +105,7 @@
             this.label3.Size = new System.Drawing.Size(23, 13);
             this.label3.TabIndex = 7;
             this.label3.Text = "RG";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -108,6 +115,7 @@
             this.label4.Size = new System.Drawing.Size(27, 13);
             this.label4.TabIndex = 8;
             this.label4.Text = "CPF";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // bnt_salvar
             // 
@@ -127,6 +135,7 @@
             this.btn_excluir.TabIndex = 11;
             this.btn_excluir.Text = "Excluir";
             this.btn_excluir.UseVisualStyleBackColor = true;
+            this.btn_excluir.Click += new System.EventHandler(this.btn_excluir_Click);
             // 
             // btnfechar
             // 
@@ -136,6 +145,7 @@
             this.btnfechar.TabIndex = 12;
             this.btnfechar.Text = "Fechar";
             this.btnfechar.UseVisualStyleBackColor = true;
+            this.btnfechar.Click += new System.EventHandler(this.btnfechar_Click);
             // 
             // label5
             // 
@@ -145,6 +155,7 @@
             this.label5.Size = new System.Drawing.Size(53, 13);
             this.label5.TabIndex = 13;
             this.label5.Text = "Endereço";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // txtb_endereco
             // 
@@ -152,6 +163,7 @@
             this.txtb_endereco.Name = "txtb_endereco";
             this.txtb_endereco.Size = new System.Drawing.Size(179, 20);
             this.txtb_endereco.TabIndex = 14;
+            this.txtb_endereco.TextChanged += new System.EventHandler(this.txtb_endereco_TextChanged);
             // 
             // label6
             // 
@@ -161,6 +173,7 @@
             this.label6.Size = new System.Drawing.Size(32, 13);
             this.label6.TabIndex = 15;
             this.label6.Text = "Email";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // txtb_email
             // 
@@ -168,6 +181,7 @@
             this.txtb_email.Name = "txtb_email";
             this.txtb_email.Size = new System.Drawing.Size(179, 20);
             this.txtb_email.TabIndex = 16;
+            this.txtb_email.TextChanged += new System.EventHandler(this.txtb_email_TextChanged);
             // 
             // FormCorretorManutencao
             // 

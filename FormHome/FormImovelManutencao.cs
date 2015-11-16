@@ -12,9 +12,21 @@ namespace FormHome
 {
     public partial class FormImovelManutencao : Form
     {
+        private int codigo;
+
         public FormImovelManutencao()
         {
             InitializeComponent();
+        }
+
+        public FormImovelManutencao(int codigo)
+        {
+            this.codigo = codigo;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

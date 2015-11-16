@@ -52,6 +52,12 @@
     <Compile Include="dao\ImovelOperacoes.cs" />
     <Compile Include="dao\InquilinoOperacoes.cs" />
     <Compile Include="dao\ProprietarioOperacoes.cs" />
+    <Compile Include="FormImovelManutencao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormImovelManutencao.Designer.cs">
+      <DependentUpon>FormImovelManutencao.cs</DependentUpon>
+    </Compile>
     <Compile Include="masterimovelDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -94,12 +100,6 @@
     </Compile>
     <Compile Include="FormImovel.Designer.cs">
       <DependentUpon>FormImovel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormImovelManutencao.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormImovelManutencao.Designer.cs">
-      <DependentUpon>FormImovelManutencao.cs</DependentUpon>
     </Compile>
     <Compile Include="FormInquilino.cs">
       <SubType>Form</SubType>
@@ -152,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormImovel.resx">
       <DependentUpon>FormImovel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormImovelManutencao.resx">
+      <DependentUpon>FormImovelManutencao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormInquilino.resx">
       <DependentUpon>FormInquilino.cs</DependentUpon>
