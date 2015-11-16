@@ -23,5 +23,21 @@ namespace FormHome
             this.corretorTableAdapter.Fill(this.masterimovelDataSet.corretor);
 
         }
+
+        private void btn_novo_corretor_Click(object sender, EventArgs e)
+        {
+            FormCorretorManutencao FormCorretorManutencao = new FormCorretorManutencao();
+            FormCorretorManutencao.ShowDialog(this);
+        }
+
+        private void dgv_Corretor_DoubleClick(object sender, EventArgs e)
+        {
+            // Obtem o codigo do do gride da linha selecionad pelo duplo clique.
+            int codigo = Convert.ToInt32(dgv_Corretor.SelectedRows[0].Cells[0].Value.ToString());
+
+            // Instancia a clesse FormeClasseManutencao enviando o codigo da classe como argumento
+            FormCorretorManutencao FormCorretorManutencao = new FormCorretorManutencao(codigo);
+            FormCorretorManutencao.ShowDialog(this);
+        }
     }
 }

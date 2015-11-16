@@ -29,11 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCorretor));
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.masterimovelDataSet = new FormHome.masterimovelDataSet();
-            this.corretorBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.corretorTableAdapter = new FormHome.masterimovelDataSetTableAdapters.corretorTableAdapter();
+            this.dgv_Corretor = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,16 +37,20 @@
             this.cpfDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rgDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.masterimovelDataSet)).BeginInit();
+            this.corretorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.masterimovelDataSet = new FormHome.masterimovelDataSet();
+            this.corretorTableAdapter = new FormHome.masterimovelDataSetTableAdapters.corretorTableAdapter();
+            this.btn_novo_corretor = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Corretor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.corretorBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masterimovelDataSet)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgv_Corretor
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgv_Corretor.AutoGenerateColumns = false;
+            this.dgv_Corretor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Corretor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
             this.nomeDataGridViewTextBoxColumn,
             this.emailDataGridViewTextBoxColumn,
@@ -58,25 +58,12 @@
             this.cpfDataGridViewTextBoxColumn,
             this.rgDataGridViewTextBoxColumn,
             this.telefoneDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.corretorBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(31, 39);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(751, 186);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // masterimovelDataSet
-            // 
-            this.masterimovelDataSet.DataSetName = "masterimovelDataSet";
-            this.masterimovelDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // corretorBindingSource
-            // 
-            this.corretorBindingSource.DataMember = "corretor";
-            this.corretorBindingSource.DataSource = this.masterimovelDataSet;
-            // 
-            // corretorTableAdapter
-            // 
-            this.corretorTableAdapter.ClearBeforeFill = true;
+            this.dgv_Corretor.DataSource = this.corretorBindingSource;
+            this.dgv_Corretor.Location = new System.Drawing.Point(31, 39);
+            this.dgv_Corretor.Name = "dgv_Corretor";
+            this.dgv_Corretor.Size = new System.Drawing.Size(751, 186);
+            this.dgv_Corretor.TabIndex = 0;
+            this.dgv_Corretor.DoubleClick += new System.EventHandler(this.dgv_Corretor_DoubleClick);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -121,26 +108,50 @@
             this.telefoneDataGridViewTextBoxColumn.HeaderText = "telefone";
             this.telefoneDataGridViewTextBoxColumn.Name = "telefoneDataGridViewTextBoxColumn";
             // 
+            // corretorBindingSource
+            // 
+            this.corretorBindingSource.DataMember = "corretor";
+            this.corretorBindingSource.DataSource = this.masterimovelDataSet;
+            // 
+            // masterimovelDataSet
+            // 
+            this.masterimovelDataSet.DataSetName = "masterimovelDataSet";
+            this.masterimovelDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // corretorTableAdapter
+            // 
+            this.corretorTableAdapter.ClearBeforeFill = true;
+            // 
+            // btn_novo_corretor
+            // 
+            this.btn_novo_corretor.Location = new System.Drawing.Point(72, 268);
+            this.btn_novo_corretor.Name = "btn_novo_corretor";
+            this.btn_novo_corretor.Size = new System.Drawing.Size(91, 23);
+            this.btn_novo_corretor.TabIndex = 1;
+            this.btn_novo_corretor.Text = "Novo Corretor";
+            this.btn_novo_corretor.UseVisualStyleBackColor = true;
+            this.btn_novo_corretor.Click += new System.EventHandler(this.btn_novo_corretor_Click);
+            // 
             // FormCorretor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(848, 344);
-            this.Controls.Add(this.dataGridView1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Controls.Add(this.btn_novo_corretor);
+            this.Controls.Add(this.dgv_Corretor);
             this.Name = "FormCorretor";
             this.Text = "Corretores";
             this.Load += new System.EventHandler(this.FormCorretor_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.masterimovelDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Corretor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.corretorBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masterimovelDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_Corretor;
         private masterimovelDataSet masterimovelDataSet;
         private System.Windows.Forms.BindingSource corretorBindingSource;
         private masterimovelDataSetTableAdapters.corretorTableAdapter corretorTableAdapter;
@@ -151,5 +162,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cpfDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rgDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefoneDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btn_novo_corretor;
     }
 }
