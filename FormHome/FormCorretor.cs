@@ -20,9 +20,9 @@ namespace FormHome
         private void FormCorretor_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'masterimovelDataSet1.corretor' table. You can move, or remove it, as needed.
-            this.corretorTableAdapter1.Fill(this.masterimovelDataSet1.corretor);
+          //  this.corretorTableAdapter1.Fill(this.masterimovelDataSet1.corretor);
             // TODO: This line of code loads data into the 'masterimovelDataSet.corretor' table. You can move, or remove it, as needed.
-            this.corretorTableAdapter.Fill(this.masterimovelDataSet.corretor);
+           // this.corretorTableAdapter.Fill(this.masterimovelDataSet.corretor);
 
         }
 
@@ -40,6 +40,11 @@ namespace FormHome
             // Instancia a clesse FormeClasseManutencao enviando o codigo da classe como argumento
             FormCorretorManutencao FormCorretorManutencao = new FormCorretorManutencao(codigo);
             FormCorretorManutencao.ShowDialog(this);
+        }
+
+        private void FormCorretor_Activated(object sender, EventArgs e)
+        {
+            this.corretorTableAdapter1.Fill(this.masterimovelDataSet1.corretor);
         }
     }
 }

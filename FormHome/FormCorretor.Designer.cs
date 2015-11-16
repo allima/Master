@@ -37,18 +37,18 @@
             this.cpfDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rgDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.corretorBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.masterimovelDataSet1 = new FormHome.masterimovelDataSet1();
             this.corretorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.masterimovelDataSet = new FormHome.masterimovelDataSet();
             this.corretorTableAdapter = new FormHome.masterimovelDataSetTableAdapters.corretorTableAdapter();
             this.btn_novo_corretor = new System.Windows.Forms.Button();
-            this.masterimovelDataSet1 = new FormHome.masterimovelDataSet1();
-            this.corretorBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.corretorTableAdapter1 = new FormHome.masterimovelDataSet1TableAdapters.corretorTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Corretor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.corretorBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masterimovelDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.corretorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.masterimovelDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.masterimovelDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.corretorBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // dgv_Corretor
@@ -113,6 +113,16 @@
             this.telefoneDataGridViewTextBoxColumn.HeaderText = "telefone";
             this.telefoneDataGridViewTextBoxColumn.Name = "telefoneDataGridViewTextBoxColumn";
             // 
+            // corretorBindingSource1
+            // 
+            this.corretorBindingSource1.DataMember = "corretor";
+            this.corretorBindingSource1.DataSource = this.masterimovelDataSet1;
+            // 
+            // masterimovelDataSet1
+            // 
+            this.masterimovelDataSet1.DataSetName = "masterimovelDataSet1";
+            this.masterimovelDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // corretorBindingSource
             // 
             this.corretorBindingSource.DataMember = "corretor";
@@ -137,16 +147,6 @@
             this.btn_novo_corretor.UseVisualStyleBackColor = true;
             this.btn_novo_corretor.Click += new System.EventHandler(this.btn_novo_corretor_Click);
             // 
-            // masterimovelDataSet1
-            // 
-            this.masterimovelDataSet1.DataSetName = "masterimovelDataSet1";
-            this.masterimovelDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // corretorBindingSource1
-            // 
-            this.corretorBindingSource1.DataMember = "corretor";
-            this.corretorBindingSource1.DataSource = this.masterimovelDataSet1;
-            // 
             // corretorTableAdapter1
             // 
             this.corretorTableAdapter1.ClearBeforeFill = true;
@@ -160,12 +160,13 @@
             this.Controls.Add(this.dgv_Corretor);
             this.Name = "FormCorretor";
             this.Text = "Corretores";
+            this.Activated += new System.EventHandler(this.FormCorretor_Activated);
             this.Load += new System.EventHandler(this.FormCorretor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Corretor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.corretorBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masterimovelDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.corretorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.masterimovelDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.masterimovelDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.corretorBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }

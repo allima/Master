@@ -24,11 +24,12 @@ namespace FormHome.controle
            , endereco
            , cpf
            , rg
-           , telefone) values (" + // Instruc5o SQL a ser executada.
-            corretor.Nome + "'," +
-            corretor.Endereco + "'," +
-            corretor.Cpf + "'," +
-            corretor.Rg + "'," +
+           , telefone) values ('" + // Instruc5o SQL a ser executada.
+            corretor.Nome + "','" +
+            corretor.Email + "','" +
+            corretor.Endereco + "','" +
+            corretor.Cpf + "','" +
+            corretor.Rg + "','" +
             corretor.Telefone + "')";
             conexao.Open(); // Abre a conexao com o banco de dados.
                             // Determina a instruc5o SQL e a string de conexio a ser usada. 
@@ -44,9 +45,9 @@ namespace FormHome.controle
                 "nome = '" + corretor.Nome + "', " +
                 "email = '" + corretor.Email + "', " +
                 "endereco = '" + corretor.Endereco + "', " +
-                "cpf = '" + corretor.Cpf + "'" +
-                "rg = '" + corretor.Rg + "', " +
-                "telefone = '" + corretor.Telefone + "', " +
+                "cpf = '" + corretor.Cpf + "', " +
+                "rg = '" + corretor.Rg + "',  " +
+                "telefone = '" + corretor.Telefone + "' " +
                 "where id = " + corretor.Id;
             conexao.Open(); // Abre a conexao com o banco de dados.
                             // Determina a instrucao SQL e a string de conexao a ser usada.
@@ -55,11 +56,11 @@ namespace FormHome.controle
             conexao.Close(); // Fecha a conexao com o banco de dados. 
         }
 
-        public static void Excluir(Corretor corretor)
+        public static void Excluir(int codigo)
         {
             SqlConnection conexao = new SqlConnection(stringConexao); // Define a conexao com o banco de dados.
-            string comando = @"delete from aluguel where id = " +  // Instrucao SQL a ser executada. 
-                corretor.Id.ToString();
+            string comando = @"delete from corretor where id = " +  // Instrucao SQL a ser executada. 
+                codigo.ToString();
             conexao.Open(); // Abre a conexao com o banco de dados. 
                             // Determina a instruc5o SQL e a string de conexao a ser usada.
             SqlCommand sql = new SqlCommand(comando, conexao);
@@ -71,7 +72,7 @@ namespace FormHome.controle
         {
             Corretor corretor = new Corretor(); // Instancia a classe Cargos. 
             SqlConnection conexao = new SqlConnection(stringConexao); // Define a conexao com o banco de dados.
-            string comando = "select * from aluguel where IDCargo = " + // Instrucao SQL a ser executada.
+            string comando = "select * from corretor where id = " + // Instrucao SQL a ser executada.
             codigo.ToString();
             conexao.Open(); // Abre a conexao com o banco de dados. 
                             // Determina a instrucao SQL e a string de conexao a ser usada.
@@ -83,7 +84,7 @@ namespace FormHome.controle
                        // atribui este valor ao atributo "id" da classe Cargos.
             corretor.Id = dr.GetInt32(0); // Obtem o valor do campo "Nome do Cargo" da linha selecionada no DataGridView e
                                           // atribui este valor ao atributo "nome" da classe Cargos. 
-            corretor.Id = dr.GetInt32(1); // Obtem o valor do campo "Departamento" da linha selecionada no DataGridView e 
+           // corretor.Id = dr.GetInt32(1); // Obtem o valor do campo "Departamento" da linha selecionada no DataGridView e 
                                                    // atribui este valor ao atributo "depto" da classe Cargos.
             corretor.Nome = dr.GetString(2);
             corretor.Email = dr.GetString(3);

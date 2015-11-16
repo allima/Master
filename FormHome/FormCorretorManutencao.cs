@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FormHome.controle;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -28,11 +29,35 @@ namespace FormHome
             InitializeComponent();
             this.codigo = codigo;
             this.operacao = "alt-exc";
+            Carrega();
+
         }
 
         private void bnt_salvar_Click(object sender, EventArgs e)
         {
+            Corretor corretor = new Corretor(); // Instancia a classe Cargos. 
+                                                // Atribui o valor do campo "Nome do Cargo" ao atributo "nome" da classe Cargos. 
+            corretor.Nome = txtb_nome.Text; // Atribui o valor do campo "Departamento" ao atributo "depto" da classe Cargos. 
+            corretor.Endereco = txtb_endereco.Text;
+            corretor.Cpf = txtb_cpf.Text;
+            corretor.Rg = txtb_rg.Text;
+            corretor.Email = txtb_email.Text;
+            corretor.Telefone = txtb_telefone.Text;
 
+            if (operacao == "inc")
+            { // Se operacao for de inclusao. 
+              // Chama o metodo Incluir da classe CargosOperacoes, passando como argumento
+              // contendo os dados do cargo a ser incluido. 
+                CorretorOperacoes.Incluir(corretor);
+            }
+            else
+            { // Se operacao for de alteracao. 
+              // Atribui o valor do campo "Cadigo" (recebido pelo construtor) ao atributo ' 
+                corretor.Id = codigo; // Chama o metodo Alterar da classe CargosOperacoes, passando como argumento
+                                      // contendo os dados do cargo a ser alterado. 
+                CorretorOperacoes.Alterar(corretor);
+            }
+            this.Close(); // Fecha o formulario de manutencao apps salvar. 
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -52,11 +77,21 @@ namespace FormHome
 
         private void btnfechar_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void btn_excluir_Click(object sender, EventArgs e)
         {
+
+
+            // Emite uma mensagem para confirmacao da exclus5o. 
+            if (MessageBox.Show("Confirma a exclusgo deste cargo?", "Atencão", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                // Chama o metodo Excluir da classe CargosOperacoes,
+                // passando como argumento o cedigo do cargo a ser excluido.
+                CorretorOperacoes.Excluir(codigo);
+                this.Close(); // Fecha o formulario de manutenc5o apes excluir. 
+            }
 
         }
 
@@ -104,5 +139,18 @@ namespace FormHome
         {
 
         }
+
+        private void Carrega()
+        {
+            Corretor cor = CorretorOperacoes.Consultar(codigo);
+            txtb_nome.Text = cor.Nome.ToString();
+            txtb_endereco.Text = cor.Endereco.ToString();
+            txtb_cpf.Text = cor.Cpf.ToString();
+            txtb_rg.Text = cor.Rg.ToString();
+            txtb_email.Text = cor.Email.ToString();
+            txtb_telefone.Text = cor.Telefone.ToString();
+
+        }
+
     }
 }

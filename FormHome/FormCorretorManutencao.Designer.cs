@@ -78,7 +78,7 @@
             this.txtb_telefone.Location = new System.Drawing.Point(194, 175);
             this.txtb_telefone.Name = "txtb_telefone";
             this.txtb_telefone.Size = new System.Drawing.Size(179, 20);
-            this.txtb_telefone.TabIndex = 3;
+            this.txtb_telefone.TabIndex = 5;
             this.txtb_telefone.TextChanged += new System.EventHandler(this.txtb_telefone_TextChanged);
             // 
             // txtb_rg
@@ -86,7 +86,7 @@
             this.txtb_rg.Location = new System.Drawing.Point(194, 99);
             this.txtb_rg.Name = "txtb_rg";
             this.txtb_rg.Size = new System.Drawing.Size(179, 20);
-            this.txtb_rg.TabIndex = 4;
+            this.txtb_rg.TabIndex = 3;
             this.txtb_rg.TextChanged += new System.EventHandler(this.txtb_rg_TextChanged);
             // 
             // txtb_cpf
@@ -94,7 +94,7 @@
             this.txtb_cpf.Location = new System.Drawing.Point(194, 137);
             this.txtb_cpf.Name = "txtb_cpf";
             this.txtb_cpf.Size = new System.Drawing.Size(179, 20);
-            this.txtb_cpf.TabIndex = 5;
+            this.txtb_cpf.TabIndex = 4;
             this.txtb_cpf.TextChanged += new System.EventHandler(this.txtb_cpf_TextChanged);
             // 
             // label3
@@ -122,7 +122,7 @@
             this.bnt_salvar.Location = new System.Drawing.Point(76, 266);
             this.bnt_salvar.Name = "bnt_salvar";
             this.bnt_salvar.Size = new System.Drawing.Size(75, 23);
-            this.bnt_salvar.TabIndex = 10;
+            this.bnt_salvar.TabIndex = 7;
             this.bnt_salvar.Text = "Salvar";
             this.bnt_salvar.UseVisualStyleBackColor = true;
             this.bnt_salvar.Click += new System.EventHandler(this.bnt_salvar_Click);
@@ -132,7 +132,7 @@
             this.btn_excluir.Location = new System.Drawing.Point(217, 266);
             this.btn_excluir.Name = "btn_excluir";
             this.btn_excluir.Size = new System.Drawing.Size(75, 23);
-            this.btn_excluir.TabIndex = 11;
+            this.btn_excluir.TabIndex = 8;
             this.btn_excluir.Text = "Excluir";
             this.btn_excluir.UseVisualStyleBackColor = true;
             this.btn_excluir.Click += new System.EventHandler(this.btn_excluir_Click);
@@ -142,7 +142,7 @@
             this.btnfechar.Location = new System.Drawing.Point(373, 266);
             this.btnfechar.Name = "btnfechar";
             this.btnfechar.Size = new System.Drawing.Size(75, 23);
-            this.btnfechar.TabIndex = 12;
+            this.btnfechar.TabIndex = 9;
             this.btnfechar.Text = "Fechar";
             this.btnfechar.UseVisualStyleBackColor = true;
             this.btnfechar.Click += new System.EventHandler(this.btnfechar_Click);
@@ -162,7 +162,7 @@
             this.txtb_endereco.Location = new System.Drawing.Point(194, 61);
             this.txtb_endereco.Name = "txtb_endereco";
             this.txtb_endereco.Size = new System.Drawing.Size(179, 20);
-            this.txtb_endereco.TabIndex = 14;
+            this.txtb_endereco.TabIndex = 2;
             this.txtb_endereco.TextChanged += new System.EventHandler(this.txtb_endereco_TextChanged);
             // 
             // label6
@@ -180,7 +180,7 @@
             this.txtb_email.Location = new System.Drawing.Point(194, 213);
             this.txtb_email.Name = "txtb_email";
             this.txtb_email.Size = new System.Drawing.Size(179, 20);
-            this.txtb_email.TabIndex = 16;
+            this.txtb_email.TabIndex = 6;
             this.txtb_email.TextChanged += new System.EventHandler(this.txtb_email_TextChanged);
             // 
             // FormCorretorManutencao
