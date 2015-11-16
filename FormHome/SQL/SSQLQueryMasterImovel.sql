@@ -16,7 +16,12 @@ tipo char(1)not null default('P')
 create table imovel
 (
 id int identity not null primary key,
-decricao varchar(250) not null
+decricao varchar(250) not null,
+endereco  varchar(250) not null,
+valor_imovel money not null,
+valor_aluguel money not null,
+idade_imovel_dt date,
+
 );
 
 create table proprietario_imovel
@@ -28,11 +33,16 @@ constraint proimoimovel_fk foreign key(id_imovel) references imovel(id),
 constraint proimoproprietario_fk foreign key(id_proprietario) references pessoa(id)
 );
 
-create table locacao(
+create table aluga_vende(
 id int,
 id_imovel int not null,
 id_inquilino int not null,
 id_corretor int not null,
+valor_aluguel money,
+data_inicio date,
+data_final date,
+data_venda date,
+valor_venda money,
 constraint locimovel_fk foreign key(id_imovel) references imovel(id),
 constraint locinquilino_fk foreign key(id_inquilino) references pessoa(id),
 constraint loccorretor_fk foreign key(id_corretor) references pessoa(id)
