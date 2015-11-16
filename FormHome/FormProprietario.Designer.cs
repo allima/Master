@@ -29,10 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.masterimovelDataSet = new FormHome.masterimovelDataSet();
-            this.proprietarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.proprietarioTableAdapter = new FormHome.masterimovelDataSetTableAdapters.proprietarioTableAdapter();
+            this.dgv_proprietario = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,16 +37,19 @@
             this.cpfDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rgDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.masterimovelDataSet)).BeginInit();
+            this.proprietarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.masterimovelDataSet = new FormHome.masterimovelDataSet();
+            this.proprietarioTableAdapter = new FormHome.masterimovelDataSetTableAdapters.proprietarioTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_proprietario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proprietarioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masterimovelDataSet)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgv_proprietario
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgv_proprietario.AutoGenerateColumns = false;
+            this.dgv_proprietario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_proprietario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
             this.nomeDataGridViewTextBoxColumn,
             this.emailDataGridViewTextBoxColumn,
@@ -57,25 +57,11 @@
             this.cpfDataGridViewTextBoxColumn,
             this.rgDataGridViewTextBoxColumn,
             this.telefoneDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.proprietarioBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(795, 249);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // masterimovelDataSet
-            // 
-            this.masterimovelDataSet.DataSetName = "masterimovelDataSet";
-            this.masterimovelDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // proprietarioBindingSource
-            // 
-            this.proprietarioBindingSource.DataMember = "proprietario";
-            this.proprietarioBindingSource.DataSource = this.masterimovelDataSet;
-            // 
-            // proprietarioTableAdapter
-            // 
-            this.proprietarioTableAdapter.ClearBeforeFill = true;
+            this.dgv_proprietario.DataSource = this.proprietarioBindingSource;
+            this.dgv_proprietario.Location = new System.Drawing.Point(12, 12);
+            this.dgv_proprietario.Name = "dgv_proprietario";
+            this.dgv_proprietario.Size = new System.Drawing.Size(795, 249);
+            this.dgv_proprietario.TabIndex = 0;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -120,25 +106,39 @@
             this.telefoneDataGridViewTextBoxColumn.HeaderText = "telefone";
             this.telefoneDataGridViewTextBoxColumn.Name = "telefoneDataGridViewTextBoxColumn";
             // 
+            // proprietarioBindingSource
+            // 
+            this.proprietarioBindingSource.DataMember = "proprietario";
+            this.proprietarioBindingSource.DataSource = this.masterimovelDataSet;
+            // 
+            // masterimovelDataSet
+            // 
+            this.masterimovelDataSet.DataSetName = "masterimovelDataSet";
+            this.masterimovelDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // proprietarioTableAdapter
+            // 
+            this.proprietarioTableAdapter.ClearBeforeFill = true;
+            // 
             // FormProprietario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(847, 373);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgv_proprietario);
             this.Name = "FormProprietario";
             this.Text = "FormProprietario";
             this.Load += new System.EventHandler(this.FormProprietario_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.masterimovelDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_proprietario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.proprietarioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masterimovelDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_proprietario;
         private masterimovelDataSet masterimovelDataSet;
         private System.Windows.Forms.BindingSource proprietarioBindingSource;
         private masterimovelDataSetTableAdapters.proprietarioTableAdapter proprietarioTableAdapter;

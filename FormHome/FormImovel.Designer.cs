@@ -29,34 +29,34 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv_imovel = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.decricaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.imovelBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.masterimovelDataSet1 = new FormHome.masterimovelDataSet1();
             this.imovelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.masterimovelDataSet = new FormHome.masterimovelDataSet();
             this.imovelTableAdapter = new FormHome.masterimovelDataSetTableAdapters.imovelTableAdapter();
-            this.masterimovelDataSet1 = new FormHome.masterimovelDataSet1();
-            this.imovelBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.imovelTableAdapter1 = new FormHome.masterimovelDataSet1TableAdapters.imovelTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_imovel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imovelBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masterimovelDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imovelBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.masterimovelDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.masterimovelDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imovelBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgv_imovel
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgv_imovel.AutoGenerateColumns = false;
+            this.dgv_imovel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_imovel.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
             this.decricaoDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.imovelBindingSource1;
-            this.dataGridView1.Location = new System.Drawing.Point(42, 49);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(428, 150);
-            this.dataGridView1.TabIndex = 0;
+            this.dgv_imovel.DataSource = this.imovelBindingSource1;
+            this.dgv_imovel.Location = new System.Drawing.Point(42, 49);
+            this.dgv_imovel.Name = "dgv_imovel";
+            this.dgv_imovel.Size = new System.Drawing.Size(428, 150);
+            this.dgv_imovel.TabIndex = 0;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -70,6 +70,16 @@
             this.decricaoDataGridViewTextBoxColumn.DataPropertyName = "decricao";
             this.decricaoDataGridViewTextBoxColumn.HeaderText = "decricao";
             this.decricaoDataGridViewTextBoxColumn.Name = "decricaoDataGridViewTextBoxColumn";
+            // 
+            // imovelBindingSource1
+            // 
+            this.imovelBindingSource1.DataMember = "imovel";
+            this.imovelBindingSource1.DataSource = this.masterimovelDataSet1;
+            // 
+            // masterimovelDataSet1
+            // 
+            this.masterimovelDataSet1.DataSetName = "masterimovelDataSet1";
+            this.masterimovelDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // imovelBindingSource
             // 
@@ -85,16 +95,6 @@
             // 
             this.imovelTableAdapter.ClearBeforeFill = true;
             // 
-            // masterimovelDataSet1
-            // 
-            this.masterimovelDataSet1.DataSetName = "masterimovelDataSet1";
-            this.masterimovelDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // imovelBindingSource1
-            // 
-            this.imovelBindingSource1.DataMember = "imovel";
-            this.imovelBindingSource1.DataSource = this.masterimovelDataSet1;
-            // 
             // imovelTableAdapter1
             // 
             this.imovelTableAdapter1.ClearBeforeFill = true;
@@ -104,22 +104,22 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(532, 262);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgv_imovel);
             this.Name = "FormImovel";
             this.Text = "FormImovel";
             this.Load += new System.EventHandler(this.FormImovel_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_imovel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imovelBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masterimovelDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imovelBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.masterimovelDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.masterimovelDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imovelBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_imovel;
         private masterimovelDataSet masterimovelDataSet;
         private System.Windows.Forms.BindingSource imovelBindingSource;
         private masterimovelDataSetTableAdapters.imovelTableAdapter imovelTableAdapter;

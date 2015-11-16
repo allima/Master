@@ -29,10 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.masterimovelDataSet = new FormHome.masterimovelDataSet();
-            this.inquilinoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.inquilinoTableAdapter = new FormHome.masterimovelDataSetTableAdapters.inquilinoTableAdapter();
+            this.dgv_inquilino = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,16 +37,19 @@
             this.cpfDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rgDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.masterimovelDataSet)).BeginInit();
+            this.inquilinoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.masterimovelDataSet = new FormHome.masterimovelDataSet();
+            this.inquilinoTableAdapter = new FormHome.masterimovelDataSetTableAdapters.inquilinoTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_inquilino)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inquilinoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masterimovelDataSet)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgv_inquilino
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgv_inquilino.AutoGenerateColumns = false;
+            this.dgv_inquilino.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_inquilino.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
             this.nomeDataGridViewTextBoxColumn,
             this.emailDataGridViewTextBoxColumn,
@@ -57,25 +57,11 @@
             this.cpfDataGridViewTextBoxColumn,
             this.rgDataGridViewTextBoxColumn,
             this.telefoneDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.inquilinoBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(33, 28);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(765, 277);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // masterimovelDataSet
-            // 
-            this.masterimovelDataSet.DataSetName = "masterimovelDataSet";
-            this.masterimovelDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // inquilinoBindingSource
-            // 
-            this.inquilinoBindingSource.DataMember = "inquilino";
-            this.inquilinoBindingSource.DataSource = this.masterimovelDataSet;
-            // 
-            // inquilinoTableAdapter
-            // 
-            this.inquilinoTableAdapter.ClearBeforeFill = true;
+            this.dgv_inquilino.DataSource = this.inquilinoBindingSource;
+            this.dgv_inquilino.Location = new System.Drawing.Point(33, 28);
+            this.dgv_inquilino.Name = "dgv_inquilino";
+            this.dgv_inquilino.Size = new System.Drawing.Size(765, 277);
+            this.dgv_inquilino.TabIndex = 0;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -120,25 +106,39 @@
             this.telefoneDataGridViewTextBoxColumn.HeaderText = "telefone";
             this.telefoneDataGridViewTextBoxColumn.Name = "telefoneDataGridViewTextBoxColumn";
             // 
+            // inquilinoBindingSource
+            // 
+            this.inquilinoBindingSource.DataMember = "inquilino";
+            this.inquilinoBindingSource.DataSource = this.masterimovelDataSet;
+            // 
+            // masterimovelDataSet
+            // 
+            this.masterimovelDataSet.DataSetName = "masterimovelDataSet";
+            this.masterimovelDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // inquilinoTableAdapter
+            // 
+            this.inquilinoTableAdapter.ClearBeforeFill = true;
+            // 
             // FormInquilino
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(849, 342);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgv_inquilino);
             this.Name = "FormInquilino";
             this.Text = "FormInquilino";
             this.Load += new System.EventHandler(this.FormInquilino_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.masterimovelDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_inquilino)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inquilinoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masterimovelDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_inquilino;
         private masterimovelDataSet masterimovelDataSet;
         private System.Windows.Forms.BindingSource inquilinoBindingSource;
         private masterimovelDataSetTableAdapters.inquilinoTableAdapter inquilinoTableAdapter;

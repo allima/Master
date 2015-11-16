@@ -141,6 +141,9 @@
     <EmbeddedResource Include="FormAluguel.resx">
       <DependentUpon>FormAluguel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormAluguelManutencao.resx">
+      <DependentUpon>FormAluguelManutencao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormCorretor.resx">
       <DependentUpon>FormCorretor.cs</DependentUpon>
     </EmbeddedResource>
@@ -153,8 +156,14 @@
     <EmbeddedResource Include="FormInquilino.resx">
       <DependentUpon>FormInquilino.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormInquilinoManutencao.resx">
+      <DependentUpon>FormInquilinoManutencao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormProprietario.resx">
       <DependentUpon>FormProprietario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProprietarioManutencao.resx">
+      <DependentUpon>FormProprietarioManutencao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
