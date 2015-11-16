@@ -23,5 +23,21 @@ namespace FormHome
             this.inquilinoTableAdapter.Fill(this.masterimovelDataSet.inquilino);
 
         }
+
+        private void dgv_inquilino_DoubleClick(object sender, EventArgs e)
+        {
+            // Obtem o codigo do do gride da linha selecionad pelo duplo clique.
+            int codigo = Convert.ToInt32(dgv_inquilino.SelectedRows[0].Cells[0].Value.ToString());
+
+            // Instancia a clesse FormeClasseManutencao enviando o codigo da classe como argumento
+            FormInquilinoManutencao formInquilinoManutencao = new FormInquilinoManutencao(codigo);
+            formInquilinoManutencao.ShowDialog(this);
+        }
+
+        private void btn_novo_inquilino_Click(object sender, EventArgs e)
+        {
+            FormInquilinoManutencao formInquilinoManutencao = new FormInquilinoManutencao();
+            formInquilinoManutencao.ShowDialog(this);
+        }
     }
 }

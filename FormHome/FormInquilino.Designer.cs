@@ -40,6 +40,7 @@
             this.inquilinoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.masterimovelDataSet = new FormHome.masterimovelDataSet();
             this.inquilinoTableAdapter = new FormHome.masterimovelDataSetTableAdapters.inquilinoTableAdapter();
+            this.btn_novo_inquilino = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_inquilino)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inquilinoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.masterimovelDataSet)).BeginInit();
@@ -62,6 +63,7 @@
             this.dgv_inquilino.Name = "dgv_inquilino";
             this.dgv_inquilino.Size = new System.Drawing.Size(765, 277);
             this.dgv_inquilino.TabIndex = 0;
+            this.dgv_inquilino.DoubleClick += new System.EventHandler(this.dgv_inquilino_DoubleClick);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -120,11 +122,22 @@
             // 
             this.inquilinoTableAdapter.ClearBeforeFill = true;
             // 
+            // btn_novo_inquilino
+            // 
+            this.btn_novo_inquilino.Location = new System.Drawing.Point(45, 311);
+            this.btn_novo_inquilino.Name = "btn_novo_inquilino";
+            this.btn_novo_inquilino.Size = new System.Drawing.Size(91, 23);
+            this.btn_novo_inquilino.TabIndex = 2;
+            this.btn_novo_inquilino.Text = "Novo Inquilino";
+            this.btn_novo_inquilino.UseVisualStyleBackColor = true;
+            this.btn_novo_inquilino.Click += new System.EventHandler(this.btn_novo_inquilino_Click);
+            // 
             // FormInquilino
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(849, 342);
+            this.Controls.Add(this.btn_novo_inquilino);
             this.Controls.Add(this.dgv_inquilino);
             this.Name = "FormInquilino";
             this.Text = "FormInquilino";
@@ -149,5 +162,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cpfDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rgDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefoneDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btn_novo_inquilino;
     }
 }

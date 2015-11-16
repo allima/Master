@@ -213,5 +213,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtb_nome;
         private System.Windows.Forms.Label label1;
+        private int codigo;
+
+        public FormInquilinoManutencao(int codigo)
+        {
+            this.codigo = codigo;
+        }
     }
 }
