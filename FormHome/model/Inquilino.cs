@@ -11,7 +11,7 @@ namespace FormHome
         private int id;
         private string nome;
         private string email;
-        private int endereco;
+        private string endereco;
         private string cpf;
         private string rg;
         private string telefone;
@@ -55,7 +55,7 @@ namespace FormHome
             }
         }
 
-        public int Endereco
+        public string Endereco
         {
             get
             {
