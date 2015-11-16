@@ -8,5 +8,33 @@ namespace FormHome
 {
     class Imovel
     {
+        private int id;
+        private string decricao;
+
+        public int Id
+        {
+            get
+            {
+                return id;
+            }
+
+            set
+            {
+                id = value;
+            }
+        }
+
+        public string Decricao
+        {
+            get
+            {
+                return decricao;
+            }
+
+            set
+            {
+                decricao = value;
+            }
+        }
     }
 }
