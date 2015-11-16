@@ -19,9 +19,9 @@ namespace FormHome.controle
 
             SqlConnection conexao = new SqlConnection(stringConexao); // Define a conexao com o banco de dados. 
             string comando = "insert aluguel values (" + // Instruc5o SQL a ser executada.
-            corretor.Imovel.Id + "'," +
-            corretor.Inquilino.Id + "'," +
-            corretor.Corretor.Id + "')";
+            corretor.Nome + "'," +
+            corretor.Telefone + "'," +
+            corretor.Rg + "')";
             conexao.Open(); // Abre a conexao com o banco de dados.
                             // Determina a instruc5o SQL e a string de conexio a ser usada. 
             SqlCommand sql = new SqlCommand(comando, conexao);
@@ -33,9 +33,9 @@ namespace FormHome.controle
         {
             SqlConnection conexao = new SqlConnection(stringConexao); // Define a conexao com o banco de dados. 
             string comando = "update aluguel set " + // Instrucao SQL a ser executada. 
-                "id_imovel = '" + corretor.Imovel.Id + "', " +
-                "id_inquilino = '" + corretor.Inquilino.Id + "'" +
-                "id_corretor = '" + corretor.Corretor.Id + "', " +
+                "id_imovel = '" + corretor.Nome + "', " +
+                "id_inquilino = '" + corretor.Telefone + "'" +
+                "id_corretor = '" + corretor.Rg + "', " +
                 "where id = " + corretor.Id;
             conexao.Open(); // Abre a conexao com o banco de dados.
                             // Determina a instrucao SQL e a string de conexao a ser usada.

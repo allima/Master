@@ -47,11 +47,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dao\AluguelOperacoes.cs" />
-    <Compile Include="Dao\CorretorOperacoes.cs" />
-    <Compile Include="Dao\ImovelOperacoes.cs" />
-    <Compile Include="Dao\InquilinoOperacoes.cs" />
-    <Compile Include="Dao\ProprietarioOperacoes.cs" />
+    <Compile Include="dao\AluguelOperacoes.cs" />
+    <Compile Include="dao\CorretorOperacoes.cs" />
+    <Compile Include="dao\ImovelOperacoes.cs" />
+    <Compile Include="dao\InquilinoOperacoes.cs" />
+    <Compile Include="dao\ProprietarioOperacoes.cs" />
     <Compile Include="model\Aluguel.cs" />
     <Compile Include="model\Corretor.cs" />
     <Compile Include="Form1.cs">
