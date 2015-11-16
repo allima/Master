@@ -55,7 +55,7 @@ namespace FormHome.controle
             SqlCommand sql = new SqlCommand(comando, conexao);
             sql.ExecuteNonQuery(); // Executa a instrucao SQL no banco de dados. 
             conexao.Close(); // Fecha a conexao com o banco de dados. 
-            
+            //
         }
     }
 }
